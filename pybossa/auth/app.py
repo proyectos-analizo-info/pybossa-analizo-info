@@ -20,7 +20,7 @@ from flask.ext.login import current_user
 
 
 def create(app=None):
-    return not current_user.is_anonymous()
+    return not current_user.is_anonymous() and current_user.admin
 
 
 def read(app=None):

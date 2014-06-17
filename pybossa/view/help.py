@@ -38,19 +38,24 @@ def api():
                            app_id=app_id)
 
 
-@blueprint.route('/license')
+@blueprint.route('/licencias')
 def license():
     """Render help/license page"""
-    return render_template('help/license.html', title='Help: Licenses')
+    return render_template('help/license.html', title='Licencias')
 
 
-@blueprint.route('/terms-of-use')
+@blueprint.route('/terminos-de-uso')
 def tos():
     """Render help/terms-of-use page"""
-    return render_template('help/tos.html', title='Help: Terms of Use')
+    return render_template('help/tos.html', title='T&eacute;rminos de uso')
 
 
-@blueprint.route('/cookies-policy')
+@blueprint.route('/politica-de-cookies')
 def cookies_policy():
     """Render help/cookies-policy page"""
-    return render_template('help/cookies_policy.html', title='Help: Cookies Policy')
+    return render_template('help/cookies_policy.html', title='Pol&iacute;tica de cookies')
+
+@blueprint.route('/aviso-legal')
+def aviso_legal():
+	# Render help/aviso-legal page
+	return render_template('help/aviso-legal.html', title='Aviso Legal')
